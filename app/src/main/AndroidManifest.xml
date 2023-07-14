@@ -23,9 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB25L_4wKVEEk-YaBpkU8CxDV_GZh-raks" />
+        
         <activity
             android:name=".View.LoginActivity"
             android:exported="false"
