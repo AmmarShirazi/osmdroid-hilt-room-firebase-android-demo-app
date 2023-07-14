@@ -6,3 +6,4 @@
 4. User image is only local and stored locally using Room.
 5. Hilt is used for dependency injects for Room DB implementation.
 6. Sorry about the bad UI.
+7. Sorry about uppercase package names.
