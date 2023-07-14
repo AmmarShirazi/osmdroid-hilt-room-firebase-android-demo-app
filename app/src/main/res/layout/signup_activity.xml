@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.SignupActivity"
+    android:background="@color/cardview_dark_background">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:foregroundGravity="center"
+        android:padding="60dp">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_below="@id/image_wrapper"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Enter Display Name..."
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:padding="10dp" />
+
+        <EditText
+            android:background="@color/white"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email..."
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/email_field"/>
+
+        <EditText
+            android:background="@color/white"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password..."
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/password_field"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/text_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/add_address_hyperlink"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Add Address"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/location_image_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/location_picker_image"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_add_location_24"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:padding="16dp"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:scaleType="fitXY"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/white"
+            android:padding="14dp"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Already Have An Account? Click Here To Login"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/login_hyperlink"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

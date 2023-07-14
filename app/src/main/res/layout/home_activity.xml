@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cardview_dark_background"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardView">
+
+        <ImageView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="fitXY"
+            android:id="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="tasveer"
+            android:padding="40dp"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/image_wrapper"
+        app:layout_constraintBottom_toTopOf="@id/logout_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="Display Name: "/>
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_marginTop="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:text="Email: "/>
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:text="Address: "/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:text="Logout"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/cardview_dark_background"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
